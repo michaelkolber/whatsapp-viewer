@@ -1,0 +1,120 @@
+
+#container {
+    width: 380px;
+    height: 580px;
+    background-color: white;
+    margin: 20px auto;
+}
+
+body {
+    background-color: lightgrey;
+    font-family: "Arial", sans-serif;
+}
+
+#statusbar {
+    height: 60px;
+    background-color: green;
+    box-shadow: 0px 3px 10px 0px lightgrey;
+    position: relative;
+    display: flex;
+    z-index: 2;
+}
+
+#chatname {
+    margin: auto 0 auto 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 17pt;
+}
+
+#chatbox {
+    height: 520px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px 15px 20px 15px;
+    background-image: url(background.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.message {
+    min-height: 18px;
+    max-width: 73%;
+    box-shadow: 0 0 4px 1px lightgrey;
+    border-radius: 5px;
+    margin-top: 7px;
+    padding: 7px;
+    padding-bottom: 23px;
+    position: relative;
+}
+
+.away, .actuallyaway {
+    background-color: white;
+}
+
+.home, .actuallyhome {
+    background-color: #cbf99e;
+    margin-left: auto;
+}
+
+p {
+    margin: 0;
+}
+
+.time {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: darkgrey;
+    font-size: 9pt;
+}
+
+.text {
+    font-size: 11pt;
+    line-height: 1.25;
+}
+
+.space {
+    height: 10px;
+}
+
+.date {
+    margin: auto;
+    padding: 2px 25px;
+    background-color: #c9d2de;
+    color: #20405a;
+    font-size: 9pt;
+    font-weight: bold;
+    border-radius: 7px;
+    box-shadow: 0 0.5px 0.5px black;
+}
+
+.datecontainer {
+    display: flex;
+    margin: 10px 0 10px 0;
+    position: relative;
+    top: 0;
+}
+
+#switchButton {
+    font-size: 8pt;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#switchButton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#switchButton:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
