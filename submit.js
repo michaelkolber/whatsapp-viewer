@@ -6,7 +6,7 @@ $(function() {
         var formData = new FormData();
         $.ajax({
             url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
-            data: $('{"name":' + $('form') + '}').serialize(),
+            data: $('form').serialize(),
             type: 'POST',
             success: function(response) {
                 $('#chatname').html(response);
