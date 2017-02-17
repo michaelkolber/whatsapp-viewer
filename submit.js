@@ -1,5 +1,5 @@
 $(function() {
-    $('button').click(submitForm());
+    $('button').click(submitForm);
     $("input").keypress(function(event) {
         if (event.which == 13) {
             event.preventDefault();
