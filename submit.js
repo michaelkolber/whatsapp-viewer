@@ -1,7 +1,14 @@
 $(function() {
     $('button').click(submitForm());
-    
-    function submitForm() {
+    $("input").keypress(function(event) {
+        if (event.which == 13) {
+            event.preventDefault();
+            submitForm();
+        }
+    });
+});
+
+function submitForm() {
         //var file = $('input').val();
         //$('button').html("Uploading...")
         //var files = $('#file-select').files;
@@ -19,4 +26,3 @@ $(function() {
             }
         });
     }
-});
