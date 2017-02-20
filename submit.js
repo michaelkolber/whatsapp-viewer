@@ -15,6 +15,8 @@ function submitForm() {
             url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
             data: file,
             type: 'POST',
+            processData: false,
+            contentType: false,
             success: function(response) {
                 $('#chatbox').html(response);
                 console.log("Success");
