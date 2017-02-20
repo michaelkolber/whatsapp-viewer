@@ -19,7 +19,7 @@ function submitForm() {
             type: 'POST',
             success: function(response) {
                 $('#chatname').html(response);
-                console.log(response);
+                console.log("Success; the chat name has been set to '" + response + "'");
             },
             error: function(error) {
                 console.log("Error:" + error);
