@@ -16,7 +16,6 @@ function submitForm() {
             data: file,
             type: 'POST',
             processData: false,
-            contentType: false,
             success: function(response) {
                 $('#chatbox').html(response);
                 console.log("Success");
