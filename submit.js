@@ -9,7 +9,7 @@ $(function() {
 });
 
 function submitForm() {
-        var chatTranscript = $('#fileSelector');
+        var chatTranscript = $('form');
         var file = new FormData(chatTranscript);
         $.ajax({
             url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
