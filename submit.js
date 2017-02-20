@@ -22,7 +22,7 @@ function submitForm() {
                 console.log("Success");
             },
             error: function(error) {
-                console.log("Error:" + error);
+                console.log("Error:", error);
             }
         });
     }
