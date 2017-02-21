@@ -11,9 +11,13 @@ $(function() {
 
 
 function submitForm() {
-    var file = evt.target.fileSelector;
+    var file = $('#fileSelector')[0].files[0];
     var reader = new FileReader();
-    var fileContents = reader.readAsText(file);
+    reader.readAsText(file);
+    var fileContents;
+    reader.addEventListener("loadend", function() {
+        fileContents = reader.result;
+    });
     $.ajax({
         url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
         data: fileContents,
