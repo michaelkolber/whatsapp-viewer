@@ -20,7 +20,7 @@ function submitForm() {
     
         $.ajax({
             url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
-            data: '"' + fileContents + '"',
+            data: '"' + String(fileContents) + '"',
             type: 'POST',
             processData: false,
             contentType: false,
