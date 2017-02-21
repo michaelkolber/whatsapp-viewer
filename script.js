@@ -65,7 +65,7 @@ function loadSampleFile() {
     $('#samplebutton').html('<i class="fa fa-refresh fa-spin fa-fw"></i> Loading...');
     $.ajax({
         url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
-        data: $("loadsamplefile").serialize,
+        data: "24/12/2015, 1:37:51: Adam: Hey, have you heard about WhatsApp Viewer?\r\n24/12/2015, 1:39:53: John: Aren't you the one who made it...?\r\n24/12/2015, 1:40:21: Adam: Yeah, and? What's your point?\r\n24/12/2015, 1:40:26: John: This is the most shameless plug I've ever seen. Wow.\r\n24/12/2015, 1:40:38: Adam: ...",
         type: 'POST',
         success: function(response) {
             names = response["names"];
