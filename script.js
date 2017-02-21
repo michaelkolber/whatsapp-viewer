@@ -7,14 +7,14 @@ $('#switchButton').click(function() {
     if(switched === 0) {
         $('.away').attr('class', 'message actuallyhome');
         $('.home').attr('class', 'message actuallyaway');
-        $('#chatname')html("Chat with " + names[1]);
+        $('#chatname').html("Chat with " + names[1]);
         switched = 1;
         console.log(switched);
     }
     else if(switched == 1) {
         $('.actuallyhome').attr('class', 'message away');
         $('.actuallyaway').attr('class', 'message home');
-        $('#chatname')html("Chat with " + names[0]);
+        $('#chatname').html("Chat with " + names[0]);
         switched = 0;
         console.log(switched);
     }
@@ -41,7 +41,7 @@ function submitForm() {
             contentType: false,
             success: function(response) {
                 names = response["names"];
-                $('#chatname')html("Chat with " + names[0]);
+                $('#chatname').html("Chat with " + names[0]);
                 $('#chatbox').html(response["chat"]);
                 console.log("Success! Response: ", response);
             },
