@@ -16,17 +16,17 @@ function submitForm() {
     reader.readAsText(file);
     var fileContents;
     reader.addEventListener("loadend", function() {
-        fileContents = reader.result;
-    
+        fileContents = JSON.stringify(reader.result);
+        console.log(fileContents);
         $.ajax({
             url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
-            data: '"' + String(fileContents) + '"',
+            data: fileContents,
             type: 'POST',
             processData: false,
             contentType: false,
             success: function(response) {
                 $('#chatbox').html(response);
-                console.log("Success");
+                console.log("Success! Response: ", response);
             },
             error: function(error) {
                 console.log("Error:", error);
