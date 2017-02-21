@@ -8,13 +8,13 @@ $(function(){
         if(switched === 0) {
             $('.away').attr('class', 'message actuallyhome');
             $('.home').attr('class', 'message actuallyaway');
-            $('#chatname').html("Chat with " + names[1]);
+            $('#chatname').html(names[1]);
             switched = 1;
         }
         else if(switched == 1) {
             $('.actuallyhome').attr('class', 'message away');
             $('.actuallyaway').attr('class', 'message home');
-            $('#chatname').html("Chat with " + names[0]);
+            $('#chatname').html(names[0]);
             switched = 0;
         }
     });
@@ -48,7 +48,7 @@ function uploadFile() {
             contentType: false,
             success: function(response) {
                 names = response["names"];
-                $('#chatname').html("Chat with " + names[0]);
+                $('#chatname').html(names[0]);
                 $('#chatbox').html(response["chat"]);
                 closeUploadBox();
                 $('#uploadbutton').html('<i class="fa fa-upload" aria-hidden="true"></i> Upload');
@@ -69,7 +69,7 @@ function loadSampleFile() {
         type: 'POST',
         success: function(response) {
             names = response["names"];
-            $('#chatname').html("Chat with " + names[0]);
+            $('#chatname').html(names[0]);
             $('#chatbox').html(response["chat"]);
             closeUploadBox();
             $('#samplebutton').html('<i class="fa fa-file-text" aria-hidden="true"></i> Load Sample File');
