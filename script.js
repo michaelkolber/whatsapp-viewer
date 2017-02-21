@@ -51,7 +51,7 @@ function uploadFile() {
                 $('#chatname').html("Chat with " + names[0]);
                 $('#chatbox').html(response["chat"]);
                 closeUploadBox();
-                $('#uploadbutton').html('<i class="fa fa-upload" aria-hidden="true"></i> Load Sample File');
+                $('#uploadbutton').html('<i class="fa fa-upload" aria-hidden="true"></i> Upload');
             },
             error: function(error) {
                 console.log("Error:", error);
