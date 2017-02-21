@@ -1,5 +1,6 @@
 
 #container {
+    width: 95%;
     max-width: 380px;
     max-height: 580px;
     background-color: white;
