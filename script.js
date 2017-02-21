@@ -77,7 +77,9 @@ function loadSampleFile() {
         error: function(error) {
             console.log("Error:", error);
             $('#samplebutton').html('<i class="fa fa-file-text" aria-hidden="true"></i> Load Sample File');
-        }
+        },
+        contentType: "application/json",
+        dataType: 'json'
     });
 }
 
