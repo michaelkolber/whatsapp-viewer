@@ -1,7 +1,8 @@
+var names = [];
+
 $(function(){
 
 var switched = 0;
-var names = [];
 
 $('#switchButton').click(function() {
     if(switched === 0) {
