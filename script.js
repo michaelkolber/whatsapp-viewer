@@ -1,6 +1,7 @@
 $(function(){
 
 var switched = 0;
+var names = [];
 
 $('#switchButton').click(function() {
     if(switched === 0) {
@@ -17,4 +18,33 @@ $('#switchButton').click(function() {
     }
 });
 
+
+$('button').click(submitForm);
+
 });
+
+function submitForm() {
+    var file = $('#fileSelector')[0].files[0];
+    var reader = new FileReader();
+    reader.readAsText(file);
+    var fileContents;
+    reader.addEventListener("loadend", function() {
+        fileContents = JSON.stringify(reader.result);
+        console.log(fileContents);
+        $.ajax({
+            url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
+            data: fileContents,
+            type: 'POST',
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                names = response["names"];
+                $('#chatbox').html(response["chat"]);
+                console.log("Success! Response: ", response);
+            },
+            error: function(error) {
+                console.log("Error:", error);
+            }
+        });
+    });
+}
