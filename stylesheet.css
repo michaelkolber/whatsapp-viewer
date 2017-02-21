@@ -4,10 +4,12 @@
     height: 580px;
     background-color: white;
     margin: 20px auto;
+    position: relative;
+    z-index: 4;
 }
 
 body {
-    background-color: lightgrey;
+    background-color: #eaeaea !important;
     font-family: "Arial", sans-serif;
 }
 
@@ -18,6 +20,7 @@ body {
     position: relative;
     display: flex;
     z-index: 2;
+    overflow: hidden;
 }
 
 #chatname {
@@ -32,7 +35,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 5px 15px 20px 15px;
-    /*background-image: url(background.jpg);*/
+    background-image: url(background.jpg);
     background-size: cover;
     box-sizing: border-box;
     position: relative;
@@ -98,23 +101,107 @@ p {
     top: 0;
 }
 
-#switchButton {
+.toolboxbutton {
     font-size: 8pt;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
-    margin: auto;
-    margin-right: 10px;
+    margin: auto 20px;;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 5px;
     border-radius: 3px;
     cursor: pointer;
 }
 
-#switchButton:hover {
+.toolboxbutton:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-#switchButton:active {
+.toolboxbutton:active {
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+#toolbox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: green;
+    padding: 10px;
+    color: white;
+}
+
+#uploadbox {
+    position: relative;
+    margin: auto;
+    min-height: 70%;
+    width: 90%;
+    max-width: 675px;
+    border-radius: 7px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+#shade {
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(30, 30, 30, .5);
+    z-index: 5;
+    transition: display 0.2s;
+}
+
+#fileform {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.infobox {
+    padding: 10px 10%;
+    text-align: center;
+}
+
+
+
+
+
+#fileSelector {
+    width: 230px;
+    margin: auto 0;
+}
+
+#uploadboxcontainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+
+#samplebutton {
+    margin: 0 auto auto auto;
+}
+
+
+
+#uploadbutton {
+    margin-top: 10px;
+}
+
+#closeuploadbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#buttonArea {
+    display: flex;
+    justify-content: space-around;
 }
