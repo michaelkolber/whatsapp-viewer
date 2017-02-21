@@ -65,7 +65,7 @@ function loadSampleFile() {
     $('#samplebutton').html('<i class="fa fa-refresh fa-spin fa-fw"></i> Loading...');
     $.ajax({
         url: 'https://meb6vjwdn2.execute-api.us-east-1.amazonaws.com/newstage/WhatsAppFileManager',
-        data: {"loadsamplefile": "true"},
+        data: JSON.stringify("loadsamplefile"),
         type: 'POST',
         success: function(response) {
             names = response["names"];
