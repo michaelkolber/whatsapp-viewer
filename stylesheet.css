@@ -1,7 +1,7 @@
 
 #container {
-    width: 380px;
-    height: 580px;
+    max-width: 380px;
+    max-height: 580px;
     background-color: white;
     margin: 20px auto;
     position: relative;
