@@ -1,24 +1,66 @@
-<head>
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<!DOCTYPE html>
+<head lang="en">
     <link rel="stylesheet" href="stylesheet.css" />
     <title>WhatsApp Chat Log Viewer</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://use.fontawesome.com/4cd1bd71c3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
+
+<div id="toolbox">
+    <h4>WhatsApp Viewer v1.0</h4>
+    <div style="margin: auto; width: 60%;"></div>
+    <div id="buttonArea">
+        <div id="switchButton" class="toolboxbutton">Switch Sides</div>
+        <div id="uploadNew" class="toolboxbutton">Upload New File</div>
+    </div>
+</div>
+
 <div id="container">
     
     <div id="statusbar">
         <div id="chatname">Chat</div>
-        <div id="switchButton">Switch Sides</div>
     </div>
     
-    <div id="chatbox">
-        <form method="post" role="form">
-            <input type="file" id="fileSelector" name="chatfile" />
-            <button type="button">Upload</button>
-        </form>
+    <div id="chatbox"></div>
+</div>
+<div id="shade"></div>
+<div id="uploadboxcontainer">
+    <div id="uploadbox">
+        <button id="closeuploadbox" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="infobox">
+            <h1><u>File Upload</u></h1>
+        </div>
+        <div class="infobox"> 
+            <div class="alert alert-info" role="alert">
+                <strong>How To:</strong><br>
+                Upload the "_chat.txt" file that came in the .zip of your WhatsApp Chat export
+                <br>
+                <br>
+                <div id="fileform">
+                    <input type="file" id="fileSelector" name="chatfile" />
+                    <button type="button" class="btn btn-primary" id="uploadbutton"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+                    
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="alert alert-info" role="alert">
+                <strong>Or try a sample file:</strong><br>
+                <br>
+                <button type="button" id="samplebutton" class="btn btn-success"><i class="fa fa-file-text" aria-hidden="true"></i> Load Sample File</button>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
