@@ -1,0 +1,234 @@
+#container {
+    width: 95%;
+    max-width: 380px;
+    max-height: 580px;
+    background-color: white;
+    margin: 20px auto;
+    position: relative;
+    z-index: 4;
+}
+
+body {
+    background-color: #eaeaea !important;
+    font-family: "Arial", sans-serif;
+}
+
+#statusbar {
+    height: 60px;
+    background-color: green;
+    box-shadow: 0px 3px 10px 0px lightgrey;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#chatname {
+    margin: auto 0 auto 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 17pt;
+}
+
+#chatbox {
+    height: 520px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px 15px 20px 15px;
+    background-image: url(background.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.message {
+    min-height: 18px;
+    max-width: 73%;
+    box-shadow: 0 0 4px 1px lightgrey;
+    border-radius: 5px;
+    margin-top: 7px;
+    padding: 7px;
+    padding-bottom: 23px;
+    position: relative;
+    background-color: white;
+}
+
+.away, .actuallyaway {
+    background-color: white;
+}
+
+.sender {
+    background-color: #cbf99e;
+    margin-left: auto;
+}
+
+p {
+    margin: 0;
+}
+
+.time {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: darkgrey;
+    font-size: 9pt;
+}
+
+.text {
+    font-size: 11pt;
+    line-height: 1.25;
+}
+
+.space {
+    height: 10px;
+}
+
+.date {
+    margin: auto;
+    padding: 2px 25px;
+    background-color: #c9d2de;
+    color: #20405a;
+    font-size: 9pt;
+    font-weight: bold;
+    border-radius: 7px;
+    box-shadow: 0 0.5px 0.5px black;
+}
+
+.datecontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0 10px 0;
+    position: relative;
+    text-align: center;
+    top: 0;
+}
+
+.toolboxbutton {
+    font-size: 8pt;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin: auto 20px;;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.toolboxbutton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toolboxbutton:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#toolbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: green;
+    padding: 10px;
+    color: white;
+}
+
+#uploadbox {
+    position: relative;
+    margin: auto;
+    min-height: 70%;
+    width: 90%;
+    max-width: 675px;
+    border-radius: 7px;
+    background-color: #f3f3f3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+}
+
+#shade {
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(30, 30, 30, .5);
+    z-index: 5;
+    -webkit-transition: display 0.2s;
+    transition: display 0.2s;
+}
+
+#fileform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.infobox {
+    padding: 10px 10%;
+    text-align: center;
+}
+
+
+
+
+
+#fileSelector {
+    width: 230px;
+    margin: auto 0;
+}
+
+#uploadboxcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+
+#samplebutton {
+    margin: 0 auto auto auto;
+}
+
+
+
+#uploadbutton {
+    margin-top: 10px;
+}
+
+#closeuploadbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#buttonArea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
