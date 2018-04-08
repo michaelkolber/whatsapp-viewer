@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <head lang="en">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117106514-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117106514-1');
+    </script>
+
     <link rel="stylesheet" href="stylesheet.css" />
     <title>WhatsApp Chat Log Viewer</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -22,11 +32,11 @@
 </div>
 
 <div id="container">
-    
+
     <div id="statusbar">
         <div id="chatname">Chat</div>
     </div>
-    
+
     <div id="chatbox"></div>
 </div>
 <div id="shade"></div>
@@ -39,7 +49,7 @@
             <h1>File Upload</h1>
             <p>Currently does not support group chats.</p>
         </div>
-        <div class="infobox"> 
+        <div class="infobox">
             <div class="alert alert-info" role="alert">
                 <strong>How To:</strong><br>
                 Upload the "_chat.txt" file that came in the .zip of your WhatsApp Chat export
@@ -48,7 +58,7 @@
                 <div id="fileform">
                     <input type="file" id="fileSelector" name="chatfile" />
                     <button type="button" class="btn btn-primary" id="uploadbutton"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
-                    
+
                 </div>
             </div>
             <br>
