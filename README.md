@@ -1,8 +1,8 @@
 # WhatsApp Chat Export Viewer
 
-####"WhatApp Viewer" for short.
+#### "WhatApp Viewer" for short.
 
-##[Try it.](https://michaelkolber.github.io/whatsapp-viewer/)
+## [Try it here.](https://michaelkolber.github.io/whatsapp-viewer/)
 
 WhatsApp Viewer takes those ugly, unformatted WhatsApp chat exports and puts them into a nice, easy-to-read format similar in appearance to the WhatsApp GUI.
 
